@@ -1,5 +1,4 @@
-
-### Q1 – Tweets per User Bucket
+## Q1 – Histogram of Tweets Twitter SQL Interview Question
 ```sql
 SELECT 
   tweets_num 	 AS tweet_bucket, 
@@ -13,3 +12,18 @@ FROM (
     GROUP BY user_id
 ) AS total_tweets 
 GROUP BY tweets_num;
+
+
+
+## Q2 – Data Science Skills (LinkedIn SQL Interview Question)
+
+```sql
+SELECT
+  candidate_id
+FROM candidates
+WHERE 
+  skill IN ('Python', 'Tableau', 'PostgreSQL')
+GROUP BY candidate_id
+HAVING COUNT(DISTINCT skill) = 3
+ORDER BY candidate_id ASC;
+
