@@ -27,3 +27,11 @@ GROUP BY candidate_id
 HAVING COUNT(DISTINCT skill) = 3
 ORDER BY candidate_id ASC;
 
+## Q3 – Page With No Likes Facebook SQL Interview Question
+```sql
+SELECT pg.page_id
+FROM pages pg
+LEFT OUTER JOIN page_likes pl 
+ON pg.page_id = pl.page_id
+WHERE pl.page_id IS NULL
+ORDER BY pg.page_id;
