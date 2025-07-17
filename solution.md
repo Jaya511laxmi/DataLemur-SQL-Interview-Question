@@ -35,3 +35,10 @@ LEFT OUTER JOIN page_likes pl
 ON pg.page_id = pl.page_id
 WHERE pl.page_id IS NULL
 ORDER BY pg.page_id;
+
+
+## Q4 - Unfinished Parts Tesla SQL Interview Question
+```sql
+SELECT DISTINCT part, assembly_step
+FROM parts_assembly
+WHERE finish_date IS NULL;
